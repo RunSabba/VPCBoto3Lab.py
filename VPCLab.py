@@ -7,7 +7,7 @@ import time
 ec2 = boto3.client('ec2')
 vpc_name = 'Abbas-vpc'
 
-#Line 11 - 32 Creating condition for boto3 to check if VPC name already exists so we dont make duplicates for the duration of the hands on
+#Line 11 - 32 Creating list and condition for boto3 to check if VPC name already exists so we dont make duplicates for the duration of the hands on
 response = ec2.describe_vpcs(
     Filters = [{'Name':'tag:Name', 'Values': [vpc_name]}]
     )
